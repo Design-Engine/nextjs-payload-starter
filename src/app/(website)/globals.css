@@ -1,0 +1,105 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-*: initial;
+  --color-*: initial;
+
+  --color-transparent: transparent;
+
+  --font-inter: "Inter", sans-serif;
+
+  /**
+    * @tokens Color
+    * @presenter Color
+  */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-brand-100: #cac6dd;
+  --color-brand-200: #ada8c3;
+  --color-brand-300: #43435c;
+  --color-brand-400: #474060;
+  --color-brand-500: #3f3a52;
+  --color-brand-600: #2e2a41;
+  --color-brand-700: #252134;
+  --color-brand-800: #1b1b2e;
+  --color-brand-900: #15131d;
+  --color-brand-1000: #0e0c15;
+
+  /**
+    * @tokens Typography
+  */
+
+  --text-display-2xl: clamp(
+    3.75rem,
+    3.536rem + 1.07vw,
+    4.5rem
+  ); /* 60px - 72px */
+  --text-display-xl: clamp(3rem, 2.786rem + 1.07vw, 3.75rem); /* 48px - 60px */
+  --text-display-lg: clamp(2.25rem, 2.036rem + 1.07vw, 3rem); /* 36px - 48px */
+  --text-display-md: clamp(
+    1.75rem,
+    1.607rem + 0.71vw,
+    2.25rem
+  ); /* 28px - 36px */
+  --text-display-sm: clamp(
+    1.5rem,
+    1.393rem + 0.54vw,
+    1.875rem
+  ); /* 24px - 30px */
+  --text-display-xs: clamp(
+    1.25rem,
+    1.179rem + 0.36vw,
+    1.5rem
+  ); /* 20px - 24px */
+  --text-lg: 1.125rem; /* 18px */
+  --text-base: 1rem; /* 16px */
+  --text-sm: 0.875rem; /* 14px */
+  --text-xs: 0.75rem; /* 12px */
+}
+
+@layer base {
+  html {
+    @apply scroll-pt-20 scroll-smooth;
+  }
+
+  body {
+    @apply font-inter;
+  }
+
+  a {
+    @apply inline-block;
+  }
+}
+
+@layer utilities {
+  .prose {
+    @apply text-inherit;
+    strong {
+      @apply !text-current;
+    }
+  }
+}
+
+/* Storybook Styles ONLY: DO NOT DELETE */
+
+.sbdocs-content {
+  @apply mx-auto !max-w-[1920px];
+}
+
+/* Token Card Styles */
+.css-11igmw9 {
+  @apply relative !gap-10;
+}
+.css-1lkb4bw {
+  @apply relative !overflow-visible !p-0 !shadow-none hover:!bg-transparent;
+}
+
+.css-1lkb4bw {
+  @apply text-right;
+  .css-1y5ujk1 {
+    @apply hidden;
+  }
+}
+
+/* End Storybook Styles */
