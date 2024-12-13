@@ -423,14 +423,13 @@ export interface Footer {
  */
 export interface SiteSetting {
   id: number;
-  socialMedia?: {
-    facebook?: string | null;
-    instagram?: string | null;
-    twitter?: string | null;
-    linkedin?: string | null;
-    youtube?: string | null;
-    tiktok?: string | null;
-  };
+  socialMedia?:
+    | {
+        label?: string | null;
+        url?: string | null;
+        id?: string | null;
+      }[]
+    | null;
   _status?: ('draft' | 'published') | null;
   updatedAt?: string | null;
   createdAt?: string | null;
@@ -482,12 +481,9 @@ export interface SiteSettingsSelect<T extends boolean = true> {
   socialMedia?:
     | T
     | {
-        facebook?: T;
-        instagram?: T;
-        twitter?: T;
-        linkedin?: T;
-        youtube?: T;
-        tiktok?: T;
+        label?: T;
+        url?: T;
+        id?: T;
       };
   _status?: T;
   updatedAt?: T;

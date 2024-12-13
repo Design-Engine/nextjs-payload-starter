@@ -33,31 +33,42 @@ export const SiteSettings: GlobalConfig = {
   fields: [
     {
       name: "socialMedia",
-      type: "group",
+      label: "Social Media",
+      type: "array",
       fields: [
         {
-          name: "facebook",
+          name: "label",
           type: "text",
         },
         {
-          name: "instagram",
+          name: "url",
           type: "text",
         },
+      ],
+      defaultValue: [
         {
-          name: "twitter",
-          type: "text",
+          label: "Facebook",
+          url: "https://www.facebook.com",
         },
         {
-          name: "linkedin",
-          type: "text",
+          label: "Instagram",
+          url: "https://www.instagram.com",
         },
         {
-          name: "youtube",
-          type: "text",
+          label: "Twitter",
+          url: "https://www.twitter.com",
         },
         {
-          name: "tiktok",
-          type: "text",
+          label: "LinkedIn",
+          url: "https://www.linkedin.com",
+        },
+        {
+          label: "YouTube",
+          url: "https://www.youtube.com",
+        },
+        {
+          label: "TikTok",
+          url: "https://www.tiktok.com",
         },
       ],
     },

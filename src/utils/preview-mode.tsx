@@ -9,7 +9,7 @@ export const PreviewMode: React.FC = () => {
     <div className="fixed bottom-0 w-full bg-black py-7 text-white">
       <Container className="flex items-center justify-between">
         <p className="text-2xl">Preview Mode Enabled:</p>
-        <Button asChild variant="secondary">
+        <Button asChild>
           <Link href="/api/exit-preview">Exit Preview</Link>
         </Button>
       </Container>

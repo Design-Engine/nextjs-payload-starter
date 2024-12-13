@@ -25,9 +25,8 @@
   --color-brand-800: #1b1b2e;
   --color-brand-900: #15131d;
   --color-brand-1000: #0e0c15;
-
   /**
-    * @tokens Typography
+  * @tokens-end
   */
 
   --text-display-2xl: clamp(
@@ -35,23 +34,29 @@
     3.536rem + 1.07vw,
     4.5rem
   ); /* 60px - 72px */
+
   --text-display-xl: clamp(3rem, 2.786rem + 1.07vw, 3.75rem); /* 48px - 60px */
+
   --text-display-lg: clamp(2.25rem, 2.036rem + 1.07vw, 3rem); /* 36px - 48px */
+
   --text-display-md: clamp(
     1.75rem,
     1.607rem + 0.71vw,
     2.25rem
   ); /* 28px - 36px */
+
   --text-display-sm: clamp(
     1.5rem,
     1.393rem + 0.54vw,
     1.875rem
   ); /* 24px - 30px */
+
   --text-display-xs: clamp(
     1.25rem,
     1.179rem + 0.36vw,
     1.5rem
   ); /* 20px - 24px */
+
   --text-lg: 1.125rem; /* 18px */
   --text-base: 1rem; /* 16px */
   --text-sm: 0.875rem; /* 14px */
@@ -76,7 +81,7 @@
   .prose {
     @apply text-inherit;
     strong {
-      @apply !text-current;
+      @apply text-current;
     }
   }
 }
